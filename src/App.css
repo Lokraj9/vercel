@@ -1,38 +1,485 @@
-.App {
-  text-align: center;
+.header{
+    margin: 60px;
+}
+.headerTitles{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    
+    color: #444;
+}
+.headerTitlesSm{
+    position: absolute;
+    top: 18%;
+    font-size: 20px;
+
+}
+.headerTitlesLg{
+    position: absolute;
+    top: 20%;
+    font-size: 100px;
+}
+.headerImg{
+    width: 100%;
+    height: 450px;
+    margin-top: 8px;
+    object-fit: cover;
+}
+.top{
+    width: 100%;
+    height: 50px;
+    background-color: rgb(239, 241, 241);
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    z-index: 999;
+
+}
+.topLeft,.topRight{
+    flex: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.topIcon{
+    font-size: 20px;
+    margin-right: 10px;
+    color: #444;
+    cursor: pointer;
+}
+.topImg{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.topList{
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.topListItem{
+    margin-right: 20px;
+    font-size: 18px;
+    font-weight: 300;
+    cursor: pointer;
+}
+.topCenter{
+    flex: 6;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.topSearchIcon{
+    font-size: 18px;
+    color: #666;
+    cursor: pointer;
+    margin-left: 15px;
+}
+.home{
+    display: flex;
+
+}
+.sidebar{
+    flex: 3;
+    margin: 20px;
+    padding-bottom: 30px;
+    background-color: #e1dfd0;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.sidebarItem{
+    display: flex;flex-direction: column;
+    align-items: center;
+    
 }
+.sidebarTitle{
+    margin: 10px;
+    padding: 5px;
+    width: 80%;
+    border-top: 1px solid #110f0f;
+    border-bottom: 1px solid #110f0f;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    color: #222;
+    font-weight: 200;
+    line-height: 20px;
+    text-align: center;
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
 }
+.sidebarItem>img{
+    margin-top: 15px;
 
-.App-link {
-  color: #61dafb;
 }
+.sidebarItem >p{
+    padding: 30px;
+}
+.sidebarList{
+    list-style: none;
+    margin-bottom: 30px;
+    
+}
+.sidebarListItem{
+    display: inline-block;
+    width: 50%;
+    margin-top: 15px;
+    cursor: pointer;
+}
+.sidebarSocial{
+    margin-top: 15px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sidebarIcon{
+    font-size: 16px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.imm{
+    height: 300px;
+}
+.post{
+    width: 375px;
+    margin: 0px 25px 40px 25px;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+}
+.postImg{
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 7px;
+}
+.postInfo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.postCat{
+    font-size: 11px;
+    color: #be9656;
+    line-height: 20px;
+    margin-top: 15px;
+    margin-right: 10px;
+    cursor: pointer;
+    
+}
+.postTitle{
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 15px;
+    cursor: pointer;
+}
+.postDate{
+    font-style: italic;
+    font-size: 13px;
+    color: #999;
+    margin-top: 15px;
+
+}
+.postDes{
+    font-family: 'varela Round',sans-serif;
+    font-size: 14px;
+    color: #444;
+    line-height: 24px;
+    margin-top: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+
+}
+.posts{
+    flex: 9;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+.single{
+    display: flex;
+}
+.singlePost{    
+    flex: 9;
+}
+.singlePostWrapper{
+    padding: 20px;
+    padding-right: 0;
+}
+.singlePostImg{
+    width: 100%;
+    height: 300px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+.singlePostTitle{
+    text-align: center;
+    margin: 10px;
+    font-size: 20px;
+}
+.singlePostEdit{
+    float: right;
+    font-size: 16px;
+}
+.singlePostIcon{
+    margin-left: 10px;
+    cursor: pointer;
+}
+.singlePostIcon:first-child{
+    color: teal;
+}
+.singlePostIcon:last-child{
+    color: tomato;
+}
+.singlePostInfo{
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    color: #b39656;
+}
+.singlePostDesc{
+    color: #666;
+    font-size: 18px;
+    line-height: 25px;
+
+
+}
+.singlePostDesc::first-letter{
+    margin-left: 20px;
+    font-size: 30px;
+    font-weight: 600;
+}
+.write{
+    padding-top: 50px;
+
+}
+.writeImg{
+    margin-left: 150px;
+    width: 70vw;
+    height: 250px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+.writeForm{
+    position: relative;
+}
+.writeFormGroup{
+    margin-left: 150px;
+    display: flex;
+    align-items: center;
+    
+}
+.writeIcon{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 1px solid;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    color: rgb(153, 144, 144);
+    cursor: pointer;
+}
+.writeInput{
+    font-size: 30px;
+    border: none;
+    padding: 20px;
+    width: 70vw;
+
+}
+.writeInput:focus{
+    outline: none;
+}
+.writeText{
+    font-size: 20px;
+    height: 100vh;
+}
+.writeSubmit{
+    position: absolute;
+    top: 20px;
+    right: 50px;
+    color: white;
+    background-color: teal;
+    padding: 10px;
+    border:none;
+    cursor: pointer;
+    font-size: 16px;
+
+}
+.settings{
+    display: flex;
+}
+.settingsWrapper{
+    flex: 9;
+    padding: 20px;
+}
+.settingsTitle{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.settingsUpdateTitle{
+    font-style: 30px;
+    margin-bottom: 20px;
+    color: lightcoral;
+
+}
+.settingDeleteTitle{
+    color: red;
+    font-style: 12px;
+    cursor: pointer;
+}
+.settingsForm{
+    display: flex;
+    flex-direction: column;
+
+}
+.settingsPP{
+    display: flex;
+    align-items: center;
+    margin: 10px 0; 
+}
+.settingsPP >img{
+    width: 70px;
+    height: 70px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+.settingsPPIcon{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: lightcoral;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.settingsForm>label{
+    font-style: 20px;
+    margin-top: 20px;
+}
+.settingsFormInput{
+    color: grey;
+    margin: 10px 0;
+    height: 30px;
+    border: none;
+    border-bottom: 1px solid lightgray;
+}
+.settingsSubmit{
+    width: 150px;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    background-color: teal;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 20px;    
+}
+.login{
+    height: calc(100vh - 50px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5)), url("https://images.pexels.com/photos/16369267/pexels-photo-16369267.jpeg?auto=compress&cs=tinysrgb&w=1200&lazy=load");
+    background-size: cover;
+    align-items: center;
+
+}
+.loginTitle{
+    font-size: 50px;
+}
+.loginForm{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.loginForm >label{
+    margin: 10px 0;
+}
+.loginInput{
+    padding: 10px;
+    background-color: white;
+    border: none;
+}
+.loginButton{
+    margin-top: 20px;
+    cursor: pointer;
+    background-color: lightcoral;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+.loginRegisterButton{
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: teal;
+    cursor: pointer;
+    border: none;
+    color: white;
+    border-radius: 10px;
+}
+.register{
+    height: calc(100vh - 50px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5)), url("https://images.pexels.com/photos/12919436/pexels-photo-12919436.jpeg?auto=compress&cs=tinysrgb&w=1200&lazy=load");
+    background-size: cover;
+    align-items: center;
+
+}
+.registerTitle{
+    font-size: 50px;
+}
+.registerForm{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.registerForm >label{
+    margin: 10px 0;
+}
+.registerInput{
+    padding: 10px;
+    background-color: white;
+    border: none;
+}
+.registerButton{
+    margin-top: 20px;
+    cursor: pointer;
+    background-color: teal;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+.registerLoginButton{
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: lightcoral;
+    cursor: pointer;
+    border: none;
+    color: white;
+    border-radius: 10px;
+}
+.link{
+   text-decoration: none;
+    color:'inherit'
 }
